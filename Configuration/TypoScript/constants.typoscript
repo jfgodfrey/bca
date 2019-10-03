@@ -1,0 +1,60 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:bca/Resources/Public/Images/aglogo.jpg
+        fileInverted = EXT:bca/Resources/Public/Images/logo-inverted.svg
+        height = 200
+        width = 200
+        alt = BCA
+        linktitle = BCA
+    }
+    favicon {
+        file = EXT:bca/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:bca/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:bca/Resources/Private/Partials/Page/
+        templateRootPath = EXT:bca/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:bca/Resources/Private/Layouts/
+        partialRootPath = EXT:bca/Resources/Private/Partials/
+        templateRootPath = EXT:bca/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:bca/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:bca/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:bca/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}
