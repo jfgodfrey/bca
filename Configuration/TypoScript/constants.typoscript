@@ -58,3 +58,12 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+### ADDED DURING CONFIGURATION ###
+page.theme.language.enable = 0
+page.theme.copyright.text = © 2019 Belgrade Christian Assembly
+page.theme.socialmedia.channels.facebook.url = https://www.facebook.com/pg/jfgodfrey52/about/?ref=page_internal
+page.preloader.logo.file = EXT:bca/Resources/Public/Images/aglogo.png
+page.preloader.logo.height = 180
+page.preloader.enable = 1
+plugin.bootstrap_package.settings.scss.primary = #50bb7c

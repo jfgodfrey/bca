@@ -1,0 +1,168 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: contact_1
+label: contact
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'message from website'
+      recipientAddress: jfgodfrey@gmail.com
+      recipientName: 'John F. Godfrey'
+      senderAddress: '{email-1}'
+      senderName: '{text-1}  {text-2}'
+      replyToAddress: '{email-1}'
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '9'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Contact
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: Name
+            properties:
+              elementDescription: ''
+              fluidAdditionalAttributes:
+                placeholder: 'your first name here'
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: 'Last name'
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'your last name here'
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Email
+            identifier: email-1
+            label: 'Email address'
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'your address here'
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'You need to provide a valid e-mail address'
+                -
+                  code: 1221560718
+                  message: 'You need to provide a valid e-mail address'
+                -
+                  code: 1347992400
+                  message: 'You need to provide a valid e-mail address'
+                -
+                  code: 1347992453
+                  message: 'You need to provide a valid e-mail address'
+            validators:
+              -
+                identifier: EmailAddress
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-3
+            label: Subject
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'give your message a subject'
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: textarea-1
+            label: Message
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'your message here'
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
